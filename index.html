@@ -4,71 +4,112 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Malaika Bahadar</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
   <style>
     * {
       box-sizing: border-box;
     }
+
     body {
-      font-family: 'Segoe UI', sans-serif;
+      font-family: 'Poppins', sans-serif;
       margin: 0;
-      background-color: #f9f9f9;
+      background-color: #f2f2f8;
       padding: 0;
       overflow-x: hidden;
     }
+
     header {
-      background-color: #004080;
-      color: white;
-      padding: 2em 1em;
+      background: linear-gradient(135deg, #ffc0cb, #add8e6);
+      color: #1a1a1a;
+      padding: 2.5em 1em;
       text-align: center;
+      font-family: 'Baloo 2', cursive;
+      position: relative;
     }
+
+    header h1 {
+      font-size: 3rem;
+      margin: 0;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    header p {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 300;
+    }
+
     header a[href^="mailto:"] {
-      color: white;
+      color: #000;
       text-decoration: underline;
     }
+
     nav {
       display: flex;
       justify-content: center;
-      background: #ddd;
+      background: #ffffff;
       padding: 1em;
-      gap: 1.5em;
+      gap: 1em;
       flex-wrap: wrap;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     }
+
     nav a {
       text-decoration: none;
-      color: #004080;
-      font-weight: bold;
+      color: #333;
+      font-weight: 600;
+      font-family: 'Poppins', sans-serif;
       cursor: pointer;
-      padding: 0.5em 1em;
-      background: white;
-      border-radius: 6px;
-      border: 1px solid #004080;
-      transition: background 0.3s;
+      padding: 0.6em 1.2em;
+      background: #fff;
+      border-radius: 30px;
+      border: 2px solid #e0e0e0;
+      transition: 0.3s;
+      box-shadow: 0 0 10px rgba(173, 216, 230, 0.4);
     }
+
     nav a:hover {
-      background: #004080;
-      color: white;
+      background: #add8e6;
+      color: #000;
+      transform: scale(1.05);
+      box-shadow: 0 0 15px rgba(255, 192, 203, 0.7);
     }
+
     main {
       margin: 2em auto;
       padding: 0 1em;
       width: 100%;
       max-width: 1000px;
     }
+
     section {
       margin-bottom: 2em;
-    }
-    h2 {
-      border-bottom: 2px solid #004080;
-      padding-bottom: 0.3em;
-      color: #004080;
-    }
-    footer {
-      text-align: center;
-      padding: 1em;
-      background: #eee;
-      font-size: 0.9em;
+      animation: fadeIn 1s ease;
     }
 
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h2 {
+      color: #444;
+      font-family: 'Baloo 2', cursive;
+      font-size: 1.8rem;
+      margin-bottom: 0.5em;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1.2em;
+      background: #f0f0f0;
+      font-size: 0.9em;
+      color: #777;
+    }
+
+    /* Modal Styles */
     .modal-overlay {
       display: none;
       position: fixed;
@@ -78,6 +119,7 @@
       align-items: center;
       z-index: 1000;
     }
+
     .modal-overlay.active {
       display: flex;
     }
@@ -89,17 +131,16 @@
       max-height: 95vh;
       overflow-y: auto;
       overflow-x: hidden;
-      border-radius: 10px;
+      border-radius: 16px;
       padding: 1.5em;
       position: relative;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
       outline: none;
-      box-sizing: border-box;
     }
 
     .modal-content ul {
-      overflow-wrap: break-word;
-      word-break: break-word;
+      padding-left: 1.2em;
+      line-height: 1.6em;
     }
 
     #closeBtn {
@@ -111,7 +152,7 @@
       font-size: 2rem;
       font-weight: bold;
       cursor: pointer;
-      color: #004080;
+      color: #666;
     }
 
     .modal-section {
@@ -120,44 +161,27 @@
 
     @media (max-width: 768px) {
       header h1 {
-        font-size: 1.5rem;
+        font-size: 2rem;
       }
+
       nav {
         flex-direction: column;
         align-items: center;
       }
+
       nav a {
-        padding: 1em;
-        width: 100%;
+        width: 90%;
         text-align: center;
       }
-      main {
-        padding: 0 0.5em;
-      }
-      footer {
-        font-size: 0.8em;
-      }
+
       h2 {
-        font-size: 1.2rem;
-        margin-top: 1.5em;
-        margin-bottom: 0.5em;
-        padding-bottom: 0.2em;
-      }
-      .modal-content h2 {
-        font-size: 1.3rem;
+        font-size: 1.5rem;
       }
     }
 
     @media (min-width: 1200px) {
       header h1 {
-        font-size: 3rem;
-      }
-      nav {
-        gap: 2em;
-      }
-      main {
-        max-width: 1200px;
-        margin: 2em auto;
+        font-size: 3.2rem;
       }
     }
   </style>
@@ -172,9 +196,9 @@
 
 <main>
   <section id="home">
-    <h2>Home</h2>
-    <p>Welcome to my personal site! I'm Malaika Bahadar, a Mathematics & Statistics student at the University of West London with a passion for data, education, and game theory.</p>
-    <p style="margin-top: 1.5em; font-weight: bold; color: #004080;">↓ Explore my background and projects below ↓</p>
+    <h2>Welcome</h2>
+    <p>Hi! I'm Malaika, a Mathematics & Statistics student at the University of West London with a passion for data, game theory, and education.</p>
+    <p style="margin-top: 1.5em; font-weight: bold;">↓ Use the buttons below to learn more ↓</p>
   </section>
 </main>
 
@@ -205,8 +229,8 @@
       <ul>
         <li><strong>University of Leeds Research Internship:</strong> Statistical analysis on 1,000+ physics graduates; built models in SPSS and Excel; presented at the National STEM Centre.</li>
         <li><strong>Discord Bot Project:</strong> Built a bot to play Rock, Paper, Scissors with 60% win rate using player behavior prediction.</li>
-        <li><strong>EPQ Dissertation:</strong> “How Far Can Mathematical Methods Predict Human Behaviour in Simple Games” — applied models to games like Coin Toss and Split or Steal.</li>
-        <li><strong>1⁄2 Maze Game (C++):</strong> Designed a game with probabilistic maze pathing and branching skill trees; part of collaboration with UCL students.</li>
+        <li><strong>EPQ Dissertation:</strong> “How Far Can Mathematical Methods Predict Human Behaviour in Simple Games.”</li>
+        <li><strong>1⁄2 Maze Game (C++):</strong> Designed a game with probabilistic maze pathing and branching skill trees.</li>
       </ul>
     </section>
 
@@ -214,7 +238,7 @@
       <h2>Experience</h2>
       <ul>
         <li><strong>Maths Tutor (2019–Present):</strong> 1-on-1 support for GCSE students from disadvantaged backgrounds.</li>
-        <li><strong>Logistics Assistant, Hallmark:</strong> Analysed inventory trends and optimized logistics using Excel.</li>
+        <li><strong>Logistics Assistant, Hallmark:</strong> Analyzed inventory trends and optimized logistics using Excel.</li>
         <li><strong>Course Enquiries Assistant:</strong> Managed student data, answered queries, and worked with marketing/admissions teams.</li>
         <li><strong>Graduate Careers Advisor:</strong> Conducted outreach to 100+ alumni per shift; top engager in the team.</li>
         <li><strong>Baking Business Owner:</strong> Scaled up to £15,000+ profit; data-driven decisions for rapid growth.</li>
@@ -225,7 +249,7 @@
       <h2>Awards & Leadership</h2>
       <ul>
         <li><strong>UKMT & Olympiads:</strong> 8× Best in Year, Summer School attendee, Mathematic Olympiad for Girls distinction.</li>
-        <li><strong>meow Volunteering Award:</strong> 100+ hours supporting youth academically and emotionally.</li>
+        <li><strong>Volunteering Award:</strong> 100+ hours supporting youth academically and emotionally.</li>
         <li><strong>Microsoft EDI Challenge:</strong> Team leader; blockchain-based solution for displacement; reached semi-finals.</li>
       </ul>
     </section>
@@ -264,13 +288,6 @@
     link.addEventListener('click', e => {
       e.preventDefault();
       const section = link.getAttribute('data-section');
-
-      if (section === 'home') {
-        modal.classList.remove('active');
-        modal.setAttribute('aria-hidden', 'true');
-        document.body.style.overflow = '';
-        return;
-      }
 
       modalSections.forEach(sec => {
         sec.style.display = (sec.id === section) ? 'block' : 'none';
