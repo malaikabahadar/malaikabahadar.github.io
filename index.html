@@ -9,6 +9,8 @@
       font-family: 'Segoe UI', sans-serif;
       margin: 0;
       background-color: #f9f9f9;
+      padding: 0;
+      box-sizing: border-box;
     }
     header {
       background-color: #004080;
@@ -17,7 +19,7 @@
       text-align: center;
     }
     header a[href^="mailto:"] {
-      color: white;          /* Email link white */
+      color: white;
       text-decoration: underline;
     }
     nav {
@@ -26,6 +28,7 @@
       background: #ddd;
       padding: 1em;
       gap: 1.5em;
+      flex-wrap: wrap;
     }
     nav a {
       text-decoration: none;
@@ -34,9 +37,10 @@
       cursor: pointer;
     }
     main {
-      max-width: 800px;
       margin: 2em auto;
       padding: 0 1em;
+      width: 100%;
+      max-width: 1000px; /* Set maximum width to accommodate large screens */
     }
     section {
       margin-bottom: 2em;
@@ -68,8 +72,8 @@
     /* Modal content */
     .modal-content {
       background: white;
-      max-width: 95vw;       /* bigger width */
-      max-height: 95vh;      /* bigger height */
+      max-width: 95vw; /* Make modal width responsive */
+      max-height: 95vh; /* Make modal height responsive */
       overflow-y: auto;
       border-radius: 10px;
       padding: 2em;
@@ -92,6 +96,45 @@
     /* Hide all modal sections by default */
     .modal-section {
       display: none;
+    }
+
+    /* Add responsiveness for small screens */
+    @media (max-width: 768px) {
+      body {
+        padding: 0;
+      }
+      header h1 {
+        font-size: 1.5rem;
+      }
+      nav {
+        flex-direction: column;
+        align-items: center;
+      }
+      nav a {
+        padding: 1em;
+        width: 100%;
+        text-align: center;
+      }
+      main {
+        padding: 0 0.5em;
+      }
+      footer {
+        font-size: 0.8em;
+      }
+    }
+
+    /* Adjustments for larger screens */
+    @media (min-width: 1200px) {
+      header h1 {
+        font-size: 3rem;
+      }
+      nav {
+        gap: 2em;
+      }
+      main {
+        max-width: 1200px;
+        margin: 2em auto;
+      }
     }
   </style>
 </head>
