@@ -19,15 +19,15 @@
       background-color: #f2f2f8;
       padding: 0;
       overflow-x: hidden;
+      cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" height="32" width="32" viewBox="0 0 32 32"><circle cx="16" cy="16" r="6" fill="%23ffc0cb"/><circle cx="20" cy="12" r="4" fill="%23add8e6"/></svg>') 16 16, auto;
     }
 
     header {
-      background: linear-gradient(135deg, #ffc0cb, #add8e6);
+      background: linear-gradient(135deg, #ffaec9, #a6d5fa);
       color: #1a1a1a;
       padding: 2.5em 1em;
       text-align: center;
       font-family: 'Baloo 2', cursive;
-      position: relative;
     }
 
     header h1 {
@@ -37,7 +37,6 @@
     }
 
     header p {
-      font-family: 'Poppins', sans-serif;
       font-weight: 300;
     }
 
@@ -49,11 +48,11 @@
     nav {
       display: flex;
       justify-content: center;
-      background: #ffffff;
-      padding: 1em;
-      gap: 1em;
       flex-wrap: wrap;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      gap: 1em;
+      padding: 1em;
+      background: #fff;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
 
     nav a {
@@ -80,7 +79,6 @@
     main {
       margin: 2em auto;
       padding: 0 1em;
-      width: 100%;
       max-width: 1000px;
     }
 
@@ -109,7 +107,6 @@
       color: #777;
     }
 
-    /* Modal Styles */
     .modal-overlay {
       display: none;
       position: fixed;
@@ -126,22 +123,16 @@
 
     .modal-content {
       background: white;
-      width: 100%;
+      width: 90%;
       max-width: 600px;
-      max-height: 95vh;
-      overflow-y: auto;
-      overflow-x: hidden;
       border-radius: 16px;
       padding: 1.5em;
-      position: relative;
       box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-      outline: none;
+      position: relative;
+      overflow-y: auto;
     }
 
-    .modal-content ul {
-      padding-left: 1.2em;
-      line-height: 1.6em;
-    }
+    .modal-section { display: none; }
 
     #closeBtn {
       position: absolute;
@@ -150,178 +141,135 @@
       background: transparent;
       border: none;
       font-size: 2rem;
-      font-weight: bold;
       cursor: pointer;
-      color: #666;
-    }
-
-    .modal-section {
-      display: none;
-    }
-
-    @media (max-width: 768px) {
-      header h1 {
-        font-size: 2rem;
-      }
-
-      nav {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      nav a {
-        width: 90%;
-        text-align: center;
-      }
-
-      h2 {
-        font-size: 1.5rem;
-      }
-    }
-
-    @media (min-width: 1200px) {
-      header h1 {
-        font-size: 3.2rem;
-      }
     }
   </style>
 </head>
 <body>
+  <header>
+    <h1>Malaika Bahadar</h1>
+    <p>Mathematics & Statistics Student | Tutor | Aspiring Data Scientist</p>
+    <p>Email: <a href="mailto:malaikabahadar@gmail.com">malaikabahadar@gmail.com</a> | London</p>
+  </header>
 
-<header>
-  <h1>Malaika Bahadar</h1>
-  <p>Mathematics & Statistics Student | Tutor | Aspiring Data Scientist</p>
-  <p>Email: <a href="mailto:malaikabahadar@gmail.com">malaikabahadar@gmail.com</a> | London</p>
-</header>
+  <nav>
+    <a data-section="education">Education</a>
+    <a data-section="research">Research</a>
+    <a data-section="projects">Projects</a>
+    <a data-section="publications">Publications</a>
+    <a data-section="certifications">Certifications</a>
+    <a data-section="experience">Experience</a>
+    <a data-section="skills">Skills</a>
+  </nav>
 
-<main>
-  <section id="home">
-    <h2>Welcome</h2>
-    <p>Hi! I'm Malaika, a Mathematics & Statistics student at the University of West London with a passion for data, game theory, and education.</p>
-    <p style="margin-top: 1.5em; font-weight: bold;">↓ Use the buttons below to learn more ↓</p>
-  </section>
-</main>
-
-<nav>
-  <a data-section="education" href="#education">Education</a>
-  <a data-section="research" href="#research">Research & Projects</a>
-  <a data-section="experience" href="#experience">Experience</a>
-  <a data-section="achievements" href="#achievements">Achievements</a>
-  <a data-section="skills" href="#skills">Skills</a>
-  <a data-section="gametheory" href="#gametheory">Game Theory</a>
-</nav>
-
-<div class="modal-overlay" id="modal" aria-hidden="true" role="dialog" aria-modal="true">
-  <div class="modal-content" tabindex="-1">
-    <button id="closeBtn" aria-label="Close popup">&times;</button>
-
-    <section id="education" class="modal-section">
-      <h2>Education</h2>
-      <ul>
-        <li><strong>University of West London</strong> — BSc Mathematics and Statistics, Predicted First (2023–2026)</li>
-        <li><strong>Dixons Sixth Form</strong> — A Levels: AABCC</li>
-        <li><strong>Belle Vue Academy</strong> — 9 GCSEs at A*</li>
-      </ul>
+  <main>
+    <section id="home">
+      <h2>Welcome</h2>
+      <p>Hi! I'm Malaika, a Mathematics & Statistics student at the University of West London with a passion for data, game theory, and education.</p>
+      <p style="margin-top: 1.5em; font-weight: bold;">↓ Use the buttons above to learn more ↓</p>
     </section>
+  </main>
 
-    <section id="research" class="modal-section">
-      <h2>Research & Projects</h2>
-      <ul>
-        <li><strong>University of Leeds Research Internship:</strong> Statistical analysis on 1,000+ physics graduates; built models in SPSS and Excel; presented at the National STEM Centre.</li>
-        <li><strong>Discord Bot Project:</strong> Built a bot to play Rock, Paper, Scissors with 60% win rate using player behavior prediction.</li>
-        <li><strong>EPQ Dissertation:</strong> “How Far Can Mathematical Methods Predict Human Behaviour in Simple Games.”</li>
-        <li><strong>1⁄2 Maze Game (C++):</strong> Designed a game with probabilistic maze pathing and branching skill trees.</li>
-      </ul>
-    </section>
+  <div class="modal-overlay" id="modal">
+    <div class="modal-content">
+      <button id="closeBtn">&times;</button>
 
-    <section id="experience" class="modal-section">
-      <h2>Experience</h2>
-      <ul>
-        <li><strong>Maths Tutor (2019–Present):</strong> 1-on-1 support for GCSE students from disadvantaged backgrounds.</li>
-        <li><strong>Logistics Assistant, Hallmark:</strong> Analyzed inventory trends and optimized logistics using Excel.</li>
-        <li><strong>Course Enquiries Assistant:</strong> Managed student data, answered queries, and worked with marketing/admissions teams.</li>
-        <li><strong>Graduate Careers Advisor:</strong> Conducted outreach to 100+ alumni per shift; top engager in the team.</li>
-        <li><strong>Baking Business Owner:</strong> Scaled up to £15,000+ profit; data-driven decisions for rapid growth.</li>
-      </ul>
-    </section>
+      <section id="education" class="modal-section">
+        <h2>Education</h2>
+        <ul>
+          <li><strong>University of West London:</strong> BSc Mathematics and Statistics, Predicted First</li>
+          <li><strong>Dixons Sixth Form:</strong> AABCC</li>
+          <li><strong>Belle Vue Academy:</strong> 9 GCSEs at A*</li>
+        </ul>
+      </section>
 
-    <section id="achievements" class="modal-section">
-      <h2>Awards & Leadership</h2>
-      <ul>
-        <li><strong>UKMT & Olympiads:</strong> 8× Best in Year, Summer School attendee, Mathematic Olympiad for Girls distinction.</li>
-        <li><strong>Volunteering Award:</strong> 100+ hours supporting youth academically and emotionally.</li>
-        <li><strong>Microsoft EDI Challenge:</strong> Team leader; blockchain-based solution for displacement; reached semi-finals.</li>
-      </ul>
-    </section>
+      <section id="research" class="modal-section">
+        <h2>Research</h2>
+        <ul>
+          <li><strong>Leeds Internship:</strong> Statistical analysis of 1,000+ physics graduates</li>
+          <li><strong>Dissertation:</strong> Predicting behavior in simple games</li>
+        </ul>
+      </section>
 
-    <section id="skills" class="modal-section">
-      <h2>Skills</h2>
-      <p><strong>Languages:</strong> English (Native), Urdu (Advanced), Punjabi (Basic)</p>
-      <p><strong>Programming:</strong> C++, C#, MATLAB, HTML</p>
-      <p><strong>Software:</strong> Microsoft Office, Adobe Photoshop, SPSS</p>
-      <p><strong>Memberships:</strong> IMA (Institute of Mathematics and its Applications)</p>
-    </section>
+      <section id="projects" class="modal-section">
+        <h2>Projects</h2>
+        <ul>
+          <li>Discord bot using behavior prediction</li>
+          <li>Maze game with skill trees (C++)</li>
+        </ul>
+      </section>
 
-    <section id="gametheory" class="modal-section">
-      <h2>Game Theory Channel</h2>
-      <p>I run a channel exploring the maths behind games, decisions, and player behavior.</p>
-      <ul>
-        <li><a href="https://youtube.com/yourchannel" target="_blank" rel="noopener">YouTube</a></li>
-        <li><a href="https://tiktok.com/@yourhandle" target="_blank" rel="noopener">TikTok</a></li>
-        <li><a href="https://instagram.com/yourhandle" target="_blank" rel="noopener">Instagram</a></li>
-      </ul>
-    </section>
+      <section id="publications" class="modal-section">
+        <h2>Publications</h2>
+        <p>Coming soon: academic contributions in educational game design and behavior prediction in game theory.</p>
+      </section>
+
+      <section id="certifications" class="modal-section">
+        <h2>Certifications</h2>
+        <ul>
+          <li>Microsoft EDI Challenge (Semi-finalist)</li>
+          <li>Volunteering Award – 100+ hrs of academic support</li>
+        </ul>
+      </section>
+
+      <section id="experience" class="modal-section">
+        <h2>Experience</h2>
+        <ul>
+          <li><strong>Maths Tutor:</strong> GCSE tutoring for disadvantaged youth</li>
+          <li><strong>Logistics Assistant:</strong> Excel-based trend analysis</li>
+          <li><strong>Graduate Advisor:</strong> Top engager, alumni outreach</li>
+          <li><strong>Entrepreneur:</strong> Ran baking business, £15k+ profit</li>
+        </ul>
+      </section>
+
+      <section id="skills" class="modal-section">
+        <h2>Skills</h2>
+        <p><strong>Languages:</strong> English, Urdu, Punjabi</p>
+        <p><strong>Coding:</strong> C++, MATLAB, HTML</p>
+        <p><strong>Software:</strong> SPSS, Excel, Photoshop</p>
+        <p><strong>Memberships:</strong> IMA</p>
+      </section>
+    </div>
   </div>
-</div>
 
-<footer>
-  &copy; 2025 Malaika Bahadar | Built with HTML & GitHub Pages
-</footer>
+  <footer>
+    &copy; 2025 Malaika Bahadar | Built with love and HTML 💖
+  </footer>
 
-<script>
-  const navLinks = document.querySelectorAll('nav a[data-section]');
-  const modal = document.getElementById('modal');
-  const closeBtn = document.getElementById('closeBtn');
-  const modalSections = document.querySelectorAll('.modal-section');
+  <script>
+    const navLinks = document.querySelectorAll('nav a');
+    const modal = document.getElementById('modal');
+    const closeBtn = document.getElementById('closeBtn');
+    const sections = document.querySelectorAll('.modal-section');
 
-  navLinks.forEach(link => {
-    link.addEventListener('click', e => {
-      e.preventDefault();
-      const section = link.getAttribute('data-section');
-
-      modalSections.forEach(sec => {
-        sec.style.display = (sec.id === section) ? 'block' : 'none';
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        const id = link.getAttribute('data-section');
+        sections.forEach(sec => sec.style.display = 'none');
+        document.getElementById(id).style.display = 'block';
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
       });
-
-      modal.classList.add('active');
-      modal.setAttribute('aria-hidden', 'false');
-      modal.querySelector('.modal-content').focus();
-      document.body.style.overflow = 'hidden';
     });
-  });
 
-  closeBtn.addEventListener('click', () => {
-    modal.classList.remove('active');
-    modal.setAttribute('aria-hidden', 'true');
-    document.body.style.overflow = '';
-  });
-
-  modal.addEventListener('click', e => {
-    if (e.target === modal) {
+    closeBtn.addEventListener('click', () => {
       modal.classList.remove('active');
-      modal.setAttribute('aria-hidden', 'true');
       document.body.style.overflow = '';
-    }
-  });
+    });
 
-  document.addEventListener('keydown', e => {
-    if (e.key === 'Escape' && modal.classList.contains('active')) {
-      modal.classList.remove('active');
-      modal.setAttribute('aria-hidden', 'true');
-      document.body.style.overflow = '';
-    }
-  });
-</script>
+    modal.addEventListener('click', e => {
+      if (e.target === modal) {
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+    });
 
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') {
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+    });
+  </script>
 </body>
 </html>
