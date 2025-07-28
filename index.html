@@ -152,18 +152,18 @@
     <p>Email: <a href="mailto:malaikabahadar@gmail.com">malaikabahadar@gmail.com</a> | London</p>
   </header>
 
-  <nav>
-    <a data-section="education">Education</a>
-    <a data-section="research">Research</a>
-    <a data-section="publications">Publications</a>
-  <a data-section="projects">Projects</a>
-     <a data-section="achievements">Achievements</a>
-   <a data-section="game theory">Game Theory</a>
-     <a data-section="certifications">Certifications</a>
-    <a data-section="experience">Experience</a>
-    <a data-section="skills">Skills</a>
+ <nav>
+  <a href="education.html">Education</a>
+  <a href="research.html">Research</a>
+  <a href="publications.html">Publications</a>
+  <a href="projects.html">Projects</a>
+  <a href="achievements.html">Achievements</a>
+  <a href="game-theory.html">Game Theory</a>
+  <a href="certifications.html">Certifications</a>
+  <a href="experience.html">Experience</a>
+  <a href="skills.html">Skills</a>
+</nav>
 
-  </nav>
 
   <main>
     <section id="home">
@@ -173,125 +173,10 @@
     </section>
   </main>
 
-  <div class="modal-overlay" id="modal">
-    <div class="modal-content">
-      <button id="closeBtn">&times;</button>
-
-      <section id="education" class="modal-section">
-        <h2>Education</h2>
-        <ul>
-          <li><strong>University of West London:</strong> BSc Mathematics and Statistics 2023-2026, Predicted First</li>
-          <li><strong>Dixons Sixth Form:</strong> ABCCC</li>
-          <li><strong>Belle Vue Academy:</strong> 9 GCSEs at A*</li>
-        </ul>
-      </section>
-
-       <section id="achievements" class="modal-section">
-        <h2>Achievements</h2>
-        <ul>
-          <li><strong>UKMT:</strong> 'Best in Year/College' for 8 consecutive years, attending the summer school</li>
-          <li><strong>Mathematic Olympiad for Girls:</strong> Achieved a Distinction</li>
-          <li><strong>Gold Volunteering Award (100+ hours):</strong> Supporting disadvantaged and struggling children physically, mentally and academically </li>
-          <li><strong>Student Volunteer of the Year:</strong> Top 3 finalist from over 50 nominations </li>
-        </ul>
-      </section>
-
-        <section id="game theory" class="modal-section">
-        <h2>Game Theory</h2>
-        <ul>
-          <li><strong>Umeoeoeo:</strong> BSc Mathematics and Statistics, Predicted First</li>
-          <li><strong>Dixekjrkejr:</strong> AABCC</li>
-          <li><strong>Bellirejri:</strong> 9 GCSEs at A*</li>
-        </ul>
-      </section>
-      
-      <section id="research" class="modal-section">
-        <h2>Research</h2>
-        <ul>
-          <li><strong>Leeds Internship:</strong> Statistical analysis of 1,000+ physics graduates</li>
-          <li><strong>Dissertation:</strong> Predicting behavior in simple games</li>
-        </ul>
-      </section>
-
-      <section id="projects" class="modal-section">
-        <h2>Projects</h2>
-        <ul>
-          <li>Discord bot using behavior prediction</li>
-          <li>Maze game with skill trees (C++)</li>
-        </ul>
-      </section>
-
-      <section id="publications" class="modal-section">
-        <h2>Publications</h2>
-        <p>Coming soon: academic contributions in educational game design and behavior prediction in game theory.</p>
-      </section>
-
-      <section id="certifications" class="modal-section">
-        <h2>Certifications</h2>
-        <ul>
-          <li>Microsoft EDI Challenge (Semi-finalist)</li>
-          <li>Volunteering Award – 100+ hrs of academic support</li>
-        </ul>
-      </section>
-
-      <section id="experience" class="modal-section">
-        <h2>Experience</h2>
-        <ul>
-          <li><strong>Maths Tutor:</strong> GCSE tutoring for disadvantaged youth</li>
-          <li><strong>Logistics Assistant:</strong> Excel-based trend analysis</li>
-          <li><strong>Graduate Advisor:</strong> Top engager, alumni outreach</li>
-          <li><strong>Entrepreneur:</strong> Ran baking business, £15k+ profit</li>
-        </ul>
-      </section>
-
-      <section id="skills" class="modal-section">
-        <h2>Skills</h2>
-        <p><strong>Languages:</strong> English, Urdu, Punjabi</p>
-        <p><strong>Coding:</strong> C++, MATLAB, HTML</p>
-        <p><strong>Software:</strong> SPSS, Excel, Photoshop</p>
-        <p><strong>Memberships:</strong> IMA</p>
-      </section>
-    </div>
-  </div>
 
   <footer>
     &copy; 2025 Malaika Bahadar | Built with love and HTML 💖
   </footer>
 
-  <script>
-    const navLinks = document.querySelectorAll('nav a');
-    const modal = document.getElementById('modal');
-    const closeBtn = document.getElementById('closeBtn');
-    const sections = document.querySelectorAll('.modal-section');
-
-    navLinks.forEach(link => {
-      link.addEventListener('click', () => {
-        const id = link.getAttribute('data-section');
-        sections.forEach(sec => sec.style.display = 'none');
-        document.getElementById(id).style.display = 'block';
-        modal.classList.add('active');
-        document.body.style.overflow = 'hidden';
-      });
-    });
-
-    closeBtn.addEventListener('click', () => {
-      modal.classList.remove('active');
-      document.body.style.overflow = '';
-    });
-
-    modal.addEventListener('click', e => {
-      if (e.target === modal) {
-        modal.classList.remove('active');
-        document.body.style.overflow = '';
-      }
-    });
-
-    document.addEventListener('keydown', e => {
-      if (e.key === 'Escape') {
-        modal.classList.remove('active');
-        document.body.style.overflow = '';
-      }
-    });
-  </script>
 </body>
 </html>
