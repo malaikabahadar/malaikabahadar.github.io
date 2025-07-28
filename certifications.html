@@ -1,22 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Certifications - Malaika Bahadar</title>
-  <link href="https://fonts.googleapis.com/css2?family=Baloo+2&family=Poppins&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Education - Malaika Bahadar</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
   <style>
-    body { font-family: 'Poppins', sans-serif; padding: 2em; background: #f2f2f8; }
-    h2 { font-family: 'Baloo 2', cursive; color: #444; }
-    ul { line-height: 1.8; }
-    a { text-decoration: none; color: #0077cc; }
+    * { box-sizing: border-box; }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      background-color: #f2f2f8;
+      padding: 0;
+      overflow-x: hidden;
+      cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" height="32" width="32" viewBox="0 0 32 32"><circle cx="16" cy="16" r="6" fill="%23ffc0cb"/><circle cx="20" cy="12" r="4" fill="%23add8e6"/></svg>') 16 16, auto;
+    }
+
+    header {
+      background: linear-gradient(135deg, #ffaec9, #a6d5fa);
+      color: #1a1a1a;
+      padding: 2.5em 1em;
+      text-align: center;
+      font-family: 'Baloo 2', cursive;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin: 0;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    header p {
+      font-weight: 300;
+    }
+
+    header a[href^="mailto:"] {
+      color: #000;
+      text-decoration: underline;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1em;
+      padding: 1em;
+      background: #fff;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 600;
+      font-family: 'Poppins', sans-serif;
+      cursor: pointer;
+      padding: 0.6em 1.2em;
+      background: #fff;
+      border-radius: 30px;
+      border: 2px solid #e0e0e0;
+      transition: 0.3s;
+      box-shadow: 0 0 10px rgba(173, 216, 230, 0.4);
+    }
+
+    nav a:hover {
+      background: #add8e6;
+      color: #000;
+      transform: scale(1.05);
+      box-shadow: 0 0 15px rgba(255, 192, 203, 0.7);
+    }
+
+    main {
+      margin: 2em auto;
+      padding: 0 1em;
+      max-width: 1000px;
+    }
+
+    section {
+      margin-bottom: 2em;
+      animation: fadeIn 1s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h2 {
+      color: #444;
+      font-family: 'Baloo 2', cursive;
+      font-size: 1.8rem;
+      margin-bottom: 0.5em;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1.2em;
+      background: #f0f0f0;
+      font-size: 0.9em;
+      color: #777;
+    }
   </style>
 </head>
 <body>
-  <h2>Certifications</h2>
-  <ul>
+  <header>
+    <h1>Malaika Bahadar</h1>
+    <p>Mathematics & Statistics Student | Tutor | Aspiring Data Scientist</p>
+    <p>Email: <a href="mailto:malaikabahadar@gmail.com">malaikabahadar@gmail.com</a> | London</p>
+  </header>
+
+  <nav>
+    <a href="education.html">Education</a>
+    <a href="research.html">Research</a>
+    <a href="publications.html">Publications</a>
+    <a href="projects.html">Projects</a>
+    <a href="achievements.html">Achievements</a>
+    <a href="gametheory.html">Game Theory</a>
+    <a href="certifications.html">Certifications</a>
+    <a href="experience.html">Experience</a>
+    <a href="skills.html">Skills</a>
+    <a href="index.html">Home</a>
+  </nav>
+
+  <main>
+    <section>
+      <h2>Certifications</h2>
+      <ul>
     <li>Microsoft EDI Challenge (Semi-finalist)</li>
     <li>Volunteering Award – 100+ hrs of academic support</li>
   </ul>
-  <p><a href="index.html">⬅ Back to homepage</a></p>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Malaika Bahadar | Built with love and HTML 💖
+  </footer>
 </body>
 </html>
