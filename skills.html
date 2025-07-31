@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Education - Malaika Bahadar</title>
+  <title>Skills - Malaika Bahadar</title>
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
@@ -14,9 +14,10 @@
     body {
       font-family: 'Poppins', sans-serif;
       margin: 0;
-      background-color: #f2f2f8;
       padding: 0;
       overflow-x: hidden;
+      background: #f2f2f8;
+      position: relative;
       cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" height="32" width="32" viewBox="0 0 32 32"><circle cx="16" cy="16" r="6" fill="%23ffc0cb"/><circle cx="20" cy="12" r="4" fill="%23add8e6"/></svg>') 16 16, auto;
     }
 
@@ -78,24 +79,40 @@
       margin: 2em auto;
       padding: 0 1em;
       max-width: 1000px;
-    }
-
-    section {
-      margin-bottom: 2em;
-      animation: fadeIn 1s ease;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
+      position: relative;
+      z-index: 2;
     }
 
     h2 {
       color: #444;
       font-family: 'Baloo 2', cursive;
       font-size: 1.8rem;
-      margin-bottom: 0.5em;
+      margin-bottom: 0.8em;
     }
+
+    .skill-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 2em;
+    }
+
+    .skill-tag {
+  border: 2px solid #ffaec9;
+  background: transparent;
+  color: #333;
+  padding: 0.5em 1em;
+  border-radius: 20px;
+  font-size: 0.95em;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.skill-tag:hover {
+  background-color: rgba(166, 213, 250, 0.5); /* translucent blue from gradient */
+  color: #000;
+  transform: scale(1.05);
+}
 
     footer {
       text-align: center;
@@ -103,38 +120,126 @@
       background: #f0f0f0;
       font-size: 0.9em;
       color: #777;
+      z-index: 2;
+      position: relative;
     }
+
+    /* Animated floaty elements */
+    .floaty {
+      position: fixed;
+      width: 18px;
+      height: 18px;
+      background-color: #ffaec9;
+      border-radius: 50%;
+      animation: floaty 12s infinite ease-in-out;
+      opacity: 0.3;
+      z-index: 1;
+    }
+
+    .floaty.blue { background-color: #a6d5fa; }
+
+    .floaty.star {
+      clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    }
+
+    .floaty.moon {
+      background: radial-gradient(circle at 30% 30%, #ffaec9 60%, transparent 61%);
+      border-radius: 50%;
+    }
+
+    @keyframes floaty {
+      0%   { transform: translateY(0px) rotate(0deg); }
+      50%  { transform: translateY(-40px) rotate(180deg); }
+      100% { transform: translateY(0px) rotate(360deg); }
+    }
+
+    /* Random positions and delays */
+    .floaty:nth-child(n) { animation-delay: calc(var(--i) * 1s); }
+    .floaty:nth-of-type(1)  { top: 10%; left: 5%;  --i: 0; }
+    .floaty:nth-of-type(2)  { top: 15%; left: 80%; --i: 2; }
+    .floaty:nth-of-type(3)  { top: 30%; left: 50%; --i: 4; }
+    .floaty:nth-of-type(4)  { top: 40%; left: 25%; --i: 1; }
+    .floaty:nth-of-type(5)  { top: 60%; left: 75%; --i: 3; }
+    .floaty:nth-of-type(6)  { top: 70%; left: 15%; --i: 2; }
+    .floaty:nth-of-type(7)  { top: 80%; left: 90%; --i: 0.5; }
+    .floaty:nth-of-type(8)  { top: 90%; left: 30%; --i: 1.5; }
+    .floaty:nth-of-type(9)  { top: 50%; left: 60%; --i: 2.5; }
+    .floaty:nth-of-type(10) { top: 65%; left: 40%; --i: 3.5; }
+    .floaty:nth-of-type(11) { top: 20%; left: 20%; --i: 1.2; }
+    .floaty:nth-of-type(12) { top: 75%; left: 5%;  --i: 4; }
+    .floaty:nth-of-type(13) { top: 10%; left: 60%; --i: 3.8; }
+    .floaty:nth-of-type(14) { top: 35%; left: 90%; --i: 2.7; }
+    .floaty:nth-of-type(15) { top: 85%; left: 45%; --i: 1.9; }
   </style>
 </head>
 <body>
   <header>
     <h1>Malaika Bahadar</h1>
-      <p>Mathematics & Statistics Student | Tutor | Aspiring Mathematics Researcher</p>
+    <p>Mathematics & Statistics Student | Tutor | Aspiring Mathematics Researcher</p>
     <p>Email: <a href="mailto:malaikabahadar@gmail.com">malaikabahadar@gmail.com</a> | London</p>
   </header>
 
   <nav>
- <a href="research.html">Research</a>
-  <a href="projects.html">Projects</a>
-   <a href="achievements.html">Achievements</a>
-   <a href="education.html">Education</a>
-  <a href="gametheory.html">Game Theory</a>
-  <a href="certifications.html">Certifications</a>
-   <a href="publications.html">Publications</a>
-  <a href="experience.html">Experience</a>
-  <a href="skills.html">Skills</a>
+    <a href="research.html">Research</a>
+    <a href="projects.html">Projects</a>
+    <a href="achievements.html">Achievements</a>
+    <a href="education.html">Education</a>
+    <a href="gametheory.html">Game Theory</a>
+    <a href="certifications.html">Certifications</a>
+    <a href="publications.html">Publications</a>
+    <a href="experience.html">Experience</a>
+    <a href="skills.html">Skills</a>
     <a href="index.html">Home</a>
   </nav>
 
   <main>
     <section>
-     <h2>Skills</h2>
-  <p><strong>Languages:</strong> English (Native), Urdu (Fluent), Punjabi (Conversational) </p>
-  <p><strong>Coding:</strong> C++, MATLAB, HTML</p>
-  <p><strong>Software:</strong> SPSS, Excel, Photoshop</p>
-  <p><strong>Memberships:</strong> The Institute of Mathematics and its Applications (IMA), Royal Statistical Scoiety (RSS) </p>
+      <h2>Skills</h2>
+      <p><strong>Languages:</strong></p>
+      <div class="skill-group">
+        <div class="skill-tag">English (Native)</div>
+        <div class="skill-tag">Urdu (Fluent)</div>
+        <div class="skill-tag">Punjabi (Conversational)</div>
+      </div>
+
+      <p><strong>Coding:</strong></p>
+      <div class="skill-group">
+        <div class="skill-tag">C++</div>
+        <div class="skill-tag">MATLAB</div>
+        <div class="skill-tag">HTML</div>
+      </div>
+
+      <p><strong>Software:</strong></p>
+      <div class="skill-group">
+        <div class="skill-tag">SPSS</div>
+        <div class="skill-tag">Excel</div>
+        <div class="skill-tag">Photoshop</div>
+      </div>
+
+      <p><strong>Memberships:</strong></p>
+      <div class="skill-group">
+        <div class="skill-tag">The Institute of Mathematics and its Applications (IMA)</div>
+        <div class="skill-tag">Royal Statistical Society (RSS)</div>
+      </div>
     </section>
   </main>
+
+  <!-- Floating shapes (circles, stars, moons) -->
+  <div class="floaty" style="--i:0;"></div>
+  <div class="floaty blue" style="--i:1;"></div>
+  <div class="floaty star" style="--i:2;"></div>
+  <div class="floaty moon" style="--i:3;"></div>
+  <div class="floaty" style="--i:4;"></div>
+  <div class="floaty blue" style="--i:5;"></div>
+  <div class="floaty moon" style="--i:6;"></div>
+  <div class="floaty star" style="--i:7;"></div>
+  <div class="floaty" style="--i:8;"></div>
+  <div class="floaty blue" style="--i:9;"></div>
+  <div class="floaty star" style="--i:10;"></div>
+  <div class="floaty moon" style="--i:11;"></div>
+  <div class="floaty" style="--i:12;"></div>
+  <div class="floaty blue" style="--i:13;"></div>
+  <div class="floaty star" style="--i:14;"></div>
 
   <footer>
     &copy; 2025 Malaika Bahadar | Built with love and HTML 💖
