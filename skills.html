@@ -83,6 +83,16 @@
       z-index: 2;
     }
 
+    /* Add fadeIn animation to section */
+    section {
+      animation: fadeIn 1s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
     h2 {
       color: #444;
       font-family: 'Baloo 2', cursive;
@@ -98,21 +108,21 @@
     }
 
     .skill-tag {
-  border: 2px solid #ffaec9;
-  background: transparent;
-  color: #333;
-  padding: 0.5em 1em;
-  border-radius: 20px;
-  font-size: 0.95em;
-  font-weight: 500;
-  transition: all 0.3s ease;
-}
+      border: 2px solid #ffaec9;
+      background: transparent;
+      color: #333;
+      padding: 0.5em 1em;
+      border-radius: 20px;
+      font-size: 0.95em;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
 
-.skill-tag:hover {
-  background-color: rgba(166, 213, 250, 0.5); /* translucent blue from gradient */
-  color: #000;
-  transform: scale(1.05);
-}
+    .skill-tag:hover {
+      background-color: rgba(166, 213, 250, 0.5); /* translucent blue from gradient */
+      color: #000;
+      transform: scale(1.05);
+    }
 
     footer {
       text-align: center;
@@ -246,3 +256,4 @@
   </footer>
 </body>
 </html>
+
