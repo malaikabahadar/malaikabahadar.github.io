@@ -36,10 +36,7 @@
       text-shadow: 1px 1px 4px rgba(0,0,0,0.2);
     }
 
-    header p {
-      font-weight: 300;
-      margin: 4px 0;
-    }
+    header p { font-weight: 300; margin: 4px 0; }
 
     header a[href^="mailto:"] {
       color: #000;
@@ -83,6 +80,15 @@
       z-index: 2;
     }
 
+    section {
+      animation: fadeIn 1s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
     .section-title {
       color: #444;
       font-family: 'Baloo 2', cursive;
@@ -93,31 +99,31 @@
 
     .achievement-card {
       background: #fbfbfd;
-      border-left: 5px solid rgba(166,213,250,0.6);
+      border-left: 5px solid rgba(166,213,250,0.8);
       border-radius: 10px;
       padding: 1.5em;
-      margin-bottom: 1.8em;
+      margin-bottom: 2em;
       box-shadow: 0 3px 8px rgba(0,0,0,0.05);
-      transition: transform .25s ease, box-shadow .25s ease;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
     }
 
     .achievement-card:hover {
-      transform: translateY(-2px);
+      transform: translateY(-3px);
       box-shadow: 0 6px 18px rgba(0,0,0,0.08);
     }
 
     .achievement-card h2 {
       margin-top: 0;
-      font-family: 'Baloo 2', cursive;
-      font-size: 1.35em;
       color: #111;
-      margin-bottom: 0.4em;
+      font-size: 1.35em;
+      font-family: 'Baloo 2', cursive;
+      margin-bottom: 0.5em;
     }
 
     .achievement-card p {
-      margin: 0.4em 0;
-      line-height: 1.5;
       color: #444;
+      line-height: 1.6;
+      margin: 0.6em 0;
     }
 
     footer {
@@ -141,6 +147,7 @@
       opacity: 0.3;
       z-index: 1;
     }
+
     .floaty.blue { background-color: #a6d5fa; }
     .floaty.star { clip-path: polygon(50% 0%,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%); }
     .floaty.moon {
@@ -159,7 +166,7 @@
 </head>
 <body>
   <header>
-    <h1>Malaika Bahadar</h1>
+    <h1>Malaika Bahadar</h1> 
     <p>Mathematics & Statistics Student | Tutor | Aspiring Mathematics Researcher</p>
     <p>Email: <a href="mailto:malaikabahadar@gmail.com">malaikabahadar@gmail.com</a> | London</p>
   </header>
