@@ -12,6 +12,31 @@
     * {
       box-sizing: border-box;
     }
+    .theory-card {
+  background: #fbfbfd;
+  border-left: 5px solid rgba(166,213,250,0.8);
+  border-radius: 10px;
+  padding: 1.5em;
+  margin-bottom: 2em;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.theory-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+.theory-card h2 {
+  margin-top: 0;
+  font-family: 'Baloo 2', cursive;
+  font-size: 1.35em;
+  color: #111;
+  margin-bottom: 0.5em;
+}
+.theory-card p {
+  color: #444;
+  line-height: 1.6;
+  margin: 0.6em 0;
+}
 /* Animated floaty elements */
 .floaty {
   position: fixed;
@@ -295,5 +320,6 @@ visualise decision-making under shifting probabilities. I find beauty in symmetr
 
 </body>
 </html>
+
 
 
