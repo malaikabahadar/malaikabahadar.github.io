@@ -124,6 +124,40 @@
       position: relative;
       z-index: 2;
     }
+.white-strip {
+  width: 100%;
+  background: #fff;
+  padding: 4em 2em;
+  margin: 3em 0;
+  position: relative;
+  z-index: 2;
+  border-top: 6px dashed #ffaec9;   /* doodly pink border */
+  border-bottom: 6px dashed #a6d5fa; /* doodly blue border */
+}
+
+/* Keep content centered inside */
+.white-strip .content {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.white-strip h2 {
+  font-family: 'Baloo 2', cursive;
+  font-size: 1.8rem;
+  margin-bottom: 1em;
+  color: #444;
+}
+
+.white-strip p {
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 1.5em;
+}
+
+
+
+
 
     /* Floating shapes */
     .floaty {
@@ -187,8 +221,17 @@
 
         <p style="margin-top: 1.5em; font-weight: bold;">⬆ Use the buttons above to learn more ⬆</p>
       </div>
-    </section>
+      
+
   </main>
+  </section>
+        <section class="white-strip">
+      <h2>Research Interests</h2>
+      <p>I’m fascinated by probability theory, decision-making under uncertainty, and how mathematical models can explain real-world behaviour. My interests extend into game theory, applied statistics, and the ways in which abstract mathematics can be translated into interactive systems.</p>
+
+      <h2>More About Me</h2>
+      <p>Beyond mathematics, I’m deeply passionate about teaching, mentoring, and encouraging others to see beauty in numbers. I also advocate for mental health and believe in using mathematical thinking to inspire resilience and creativity.</p>
+    </section>
 
   <!-- Floating shapes -->
   <div class="floaty" style="--i:0; top:10%; left:5%;"></div>
