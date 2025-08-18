@@ -172,7 +172,8 @@ document.addEventListener('mousemove', e => {
 .white-strip .content {
   max-width: 1000px;
   margin: 0 auto;
-  text-align: center;
+  text-align: left;
+  padding-right: 40%;
 }
 
 .white-strip h2 {
@@ -188,6 +189,47 @@ document.addEventListener('mousemove', e => {
   margin-bottom: 1.5em;
 }
 
+.research-box {
+  max-width: 35%;
+  background: #fff0f2; /* very light muted pink */
+  padding: 1.5em 2em;
+  border-radius: 15px;
+  border: 2px solid rgba(255,182,193,0.3); /* soft pink border */
+  box-shadow: 0 0 15px rgba(255,182,193,0.2);
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  position: absolute;
+  top: 120px;
+  right: 20px; /* moved slightly left from 0 */
+  animation: slideIn 1s ease-out forwards, bobbing 4s ease-in-out infinite, glowPulse 3s infinite alternate;
+  overflow: hidden;
+}
+
+.research-box h3 {
+  margin-top: 0;
+  margin-bottom: 0.75em;
+  font-family: 'Baloo 2', cursive;
+  font-size: 1.2rem;
+  color: #ffb6c1;
+  border-bottom: 2px solid rgba(255,182,193,0.4);
+  padding-bottom: 0.3em;
+}
+
+@keyframes slideIn {
+  0% { transform: translateX(100%) translateY(0); opacity: 0; }
+  100% { transform: translateX(0) translateY(0); opacity: 1; }
+}
+
+@keyframes bobbing {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes glowPulse {
+  0% { box-shadow: 0 0 5px rgba(255,182,193,0.1); }
+  50% { box-shadow: 0 0 20px rgba(255,182,193,0.3); }
+  100% { box-shadow: 0 0 5px rgba(255,182,193,0.1); }
+}
 
 
 
@@ -258,13 +300,20 @@ document.addEventListener('mousemove', e => {
 
   </main>
   </section>
-        <section class="white-strip">
-      <h2>Research Interests</h2>
-      <p>I’m fascinated by probability theory, decision-making under uncertainty, and how mathematical models can explain real-world behaviour. My interests extend into game theory, applied statistics, and the ways in which abstract mathematics can be translated into interactive systems.</p>
+       
+    <section class="white-strip">
+      <div class="content">
+        <h2>More About Me</h2>
+        <p>Outside of equations and models, I’m passionate about teaching, mentoring, and helping others find joy in numbers. I’ve run probability games with hundreds of participants, turned complex theories into 3D visualisations, and guided peers to discover their own patterns of thinking.</p>
+        <p>Mental health advocacy is another key part of my life. I believe resilience, creativity, and analytical thinking are deeply connected — and I aim to apply mathematical insight not just in research, but to inspire real-world change.</p>
+        <p>Ultimately, I’m a student, a thinker, and a storyteller at heart — always seeking the balance between chaos and order, and looking for the beauty hidden in unexpected places.</p>
+      </div>
 
-      <h2>More About Me</h2>
-      <p>Beyond mathematics, I’m deeply passionate about teaching, mentoring, and encouraging others to see beauty in numbers. I also advocate for mental health and believe in using mathematical thinking to inspire resilience and creativity.</p>
+      <div class="research-box">
+        <p>✨ I explore probability, game theory, and applied statistics to uncover patterns in real-world behavior. ✨</p>
+      </div>
     </section>
+
 
   <!-- Floating shapes -->
   <div class="floaty" style="--i:0; top:10%; left:5%;"></div>
