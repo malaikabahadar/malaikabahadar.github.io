@@ -7,43 +7,38 @@
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-<script>
-document.addEventListener('mousemove', e => {
-  for (let i = 0; i < 3; i++) { // fewer particles
-    const particle = document.createElement('div');
-    const size = Math.random() * 5 + 3; // smaller particle
-    particle.style.position = 'absolute';
-    particle.style.width = particle.style.height = size + 'px';
-    particle.style.borderRadius = '50%';
-    particle.style.background = `rgba(255, 182, 193, ${Math.random() * 0.6 + 0.4})`; // light pink
-    particle.style.left = e.pageX + 'px';
-    particle.style.top = e.pageY + 'px';
-    particle.style.pointerEvents = 'none';
-    
-    // smaller, tighter spread
-    const offsetX = (Math.random() - 0.5) * 20; 
-    const offsetY = (Math.random() - 0.5) * 20;
-    particle.style.transform = `translate(${offsetX}px, ${offsetY}px)`;
-    particle.style.opacity = 1;
-    particle.style.transition = 'transform 0.7s ease-out, opacity 0.7s ease-out';
-    
-    document.body.appendChild(particle);
 
-    setTimeout(() => {
-      particle.style.transform += ' translateY(-10px)';
-      particle.style.opacity = 0;
-    }, 10);
-
-    setTimeout(() => {
-      particle.remove();
-    }, 700);
-  }
-});
-</script>
+  <script>
+    document.addEventListener('mousemove', e => {
+      for (let i = 0; i < 3; i++) {
+        const particle = document.createElement('div');
+        const size = Math.random() * 5 + 3;
+        particle.style.position = 'absolute';
+        particle.style.width = particle.style.height = size + 'px';
+        particle.style.borderRadius = '50%';
+        particle.style.background = `rgba(255, 182, 193, ${Math.random() * 0.6 + 0.4})`;
+        particle.style.left = e.pageX + 'px';
+        particle.style.top = e.pageY + 'px';
+        particle.style.pointerEvents = 'none';
+        const offsetX = (Math.random() - 0.5) * 20;
+        const offsetY = (Math.random() - 0.5) * 20;
+        particle.style.transform = `translate(${offsetX}px, ${offsetY}px)`;
+        particle.style.opacity = 1;
+        particle.style.transition = 'transform 0.7s ease-out, opacity 0.7s ease-out';
+        document.body.appendChild(particle);
+        setTimeout(() => {
+          particle.style.transform += ' translateY(-10px)';
+          particle.style.opacity = 0;
+        }, 10);
+        setTimeout(() => {
+          particle.remove();
+        }, 700);
+      }
+    });
+  </script>
 
   <style>
     * { box-sizing: border-box; }
-
     body {
       font-family: 'Poppins', sans-serif;
       margin: 0;
@@ -56,25 +51,19 @@ document.addEventListener('mousemove', e => {
     header {
       background: linear-gradient(135deg, #ffaec9, #a6d5fa);
       color: #1a1a1a;
-      position: relative;
-      z-index: 10;
       padding: 2.5em 1em;
       text-align: center;
       font-family: 'Baloo 2', cursive;
+      position: relative;
+      z-index: 10;
     }
-
     header h1 {
       font-size: 3rem;
       margin: 0;
       text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
     }
-
     header p { font-weight: 300; }
-
-    header a[href^="mailto:"] {
-      color: #000;
-      text-decoration: underline;
-    }
+    header a[href^="mailto:"] { color: #000; text-decoration: underline; }
 
     nav {
       display: flex;
@@ -84,10 +73,9 @@ document.addEventListener('mousemove', e => {
       padding: 1em;
       background: #fff;
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      position: relative;
       z-index: 10;
+      position: relative;
     }
-
     nav a {
       text-decoration: none;
       color: #333;
@@ -99,7 +87,6 @@ document.addEventListener('mousemove', e => {
       transition: 0.3s;
       box-shadow: 0 0 10px rgba(173, 216, 230, 0.4);
     }
-
     nav a:hover {
       background: #add8e6;
       color: #000;
@@ -112,14 +99,12 @@ document.addEventListener('mousemove', e => {
       padding: 0 1em;
       max-width: 1000px;
       position: relative;
-      z-index: 2; /* keeps above floaties */
+      z-index: 2;
     }
-
     section {
       margin-bottom: 2em;
       animation: fadeIn 1s ease;
     }
-
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
@@ -132,7 +117,6 @@ document.addEventListener('mousemove', e => {
       margin-bottom: 1em;
     }
 
-    /* exactly the same as project-card */
     .project-card {
       background: #fbfbfd;
       border-left: 5px solid rgba(255,174,201,0.6);
@@ -142,97 +126,80 @@ document.addEventListener('mousemove', e => {
       box-shadow: 0 3px 8px rgba(0,0,0,0.05);
       transition: transform 0.25s ease, box-shadow 0.25s ease;
     }
-
     .project-card:hover {
       transform: translateY(-3px);
       box-shadow: 0 6px 18px rgba(0,0,0,0.08);
     }
 
-    footer {
+    .white-strip {
+      width: 100%;
+      background: #fbfbfd;
+      padding: 4em 2em;
+      margin: 3em 0;
+      border-top: 6px dashed #ffaec9;
+      border-bottom: 6px dashed #a6d5fa;
       text-align: center;
-      padding: 1.2em;
-      background: #f0f0f0;
-      font-size: 0.9em;
-      color: #777;
-      position: relative;
-      z-index: 2;
     }
-.white-strip {
-  width: 100%;
-  background: #fbfbfd;
-  padding: 4em 2em;
-  margin: 3em 0;
-  position: relative;
-  z-index: 2;
-  border-top: 6px dashed #ffaec9;   /* doodly pink border */
-  border-bottom: 6px dashed #a6d5fa; /* doodly blue border */
-}
+    .white-strip .content {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .white-strip h2 {
+      font-family: 'Baloo 2', cursive;
+      font-size: 1.8rem;
+      margin-bottom: 1em;
+      color: #444;
+    }
+    .white-strip p {
+      line-height: 1.6;
+      color: #333;
+      margin-bottom: 1.5em;
+    }
 
-/* Keep content centered inside */
-.white-strip .content {
-  max-width: 1000px;
-  margin: 0 auto;
-  text-align: left;
-  padding-right: 40%;
-}
+    /* Research Interests BOX */
+    .research-box {
+      width: 100%;
+      background: linear-gradient(135deg, #f8f2ff, #e6f6ff);
+      padding: 3em 2em;
+      border-radius: 15px;
+      border: 2px solid rgba(166, 213, 250, 0.4);
+      box-shadow: 0 0 15px rgba(166, 213, 250, 0.25);
+      font-family: 'Poppins', sans-serif;
+      color: #333;
+      margin: 3em auto;
+      max-width: 1000px;
+      animation: slideIn 1s ease-out forwards, bobbing 4s ease-in-out infinite, glowPulse 3s infinite alternate;
+      text-align: center;
+    }
+    .research-box h3 {
+      margin-top: 0;
+      margin-bottom: 1em;
+      font-family: 'Baloo 2', cursive;
+      font-size: 1.8rem;
+      color: #6a5acd;
+      border-bottom: 2px solid rgba(166,213,250,0.5);
+      padding-bottom: 0.5em;
+    }
+    .research-box p {
+      max-width: 800px;
+      margin: 0.5em auto;
+      line-height: 1.6;
+      font-size: 1.05rem;
+    }
 
-.white-strip h2 {
-  font-family: 'Baloo 2', cursive;
-  font-size: 1.8rem;
-  margin-bottom: 1em;
-  color: #444;
-}
-
-.white-strip p {
-  line-height: 1.6;
-  color: #333;
-  margin-bottom: 1.5em;
-}
-
-.research-box {
-  max-width: 35%;
-  background: #fff0f2; /* very light muted pink */
-  padding: 1.5em 2em;
-  border-radius: 15px;
-  border: 2px solid rgba(255,182,193,0.3); /* soft pink border */
-  box-shadow: 0 0 15px rgba(255,182,193,0.2);
-  font-family: 'Poppins', sans-serif;
-  color: #333;
-  position: absolute;
-  top: 120px;
-  right: 20px; /* moved slightly left from 0 */
-  animation: slideIn 1s ease-out forwards, bobbing 4s ease-in-out infinite, glowPulse 3s infinite alternate;
-  overflow: hidden;
-}
-
-.research-box h3 {
-  margin-top: 0;
-  margin-bottom: 0.75em;
-  font-family: 'Baloo 2', cursive;
-  font-size: 1.2rem;
-  color: #ffb6c1;
-  border-bottom: 2px solid rgba(255,182,193,0.4);
-  padding-bottom: 0.3em;
-}
-
-@keyframes slideIn {
-  0% { transform: translateX(100%) translateY(0); opacity: 0; }
-  100% { transform: translateX(0) translateY(0); opacity: 1; }
-}
-
-@keyframes bobbing {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
-}
-
-@keyframes glowPulse {
-  0% { box-shadow: 0 0 5px rgba(255,182,193,0.1); }
-  50% { box-shadow: 0 0 20px rgba(255,182,193,0.3); }
-  100% { box-shadow: 0 0 5px rgba(255,182,193,0.1); }
-}
-
-
-
+    @keyframes slideIn {
+      0% { transform: translateX(100%); opacity: 0; }
+      100% { transform: translateX(0); opacity: 1; }
+    }
+    @keyframes bobbing {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+    @keyframes glowPulse {
+      0% { box-shadow: 0 0 5px rgba(166,213,250,0.2); }
+      50% { box-shadow: 0 0 20px rgba(166,213,250,0.4); }
+      100% { box-shadow: 0 0 5px rgba(166,213,250,0.2); }
+    }
 
     /* Floating shapes */
     .floaty {
@@ -245,7 +212,6 @@ document.addEventListener('mousemove', e => {
       opacity: 0.3;
       z-index: 1;
     }
-
     .floaty.blue { background-color: #a6d5fa; }
     .floaty.star {
       clip-path: polygon(50% 0%,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%);
@@ -254,11 +220,20 @@ document.addEventListener('mousemove', e => {
       background: radial-gradient(circle at 30% 30%, #ffaec9 60%, transparent 61%);
       border-radius: 50%;
     }
-
     @keyframes floaty {
-      0%   { transform: translateY(0px) rotate(0deg); }
-      50%  { transform: translateY(-40px) rotate(180deg); }
+      0% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(-40px) rotate(180deg); }
       100% { transform: translateY(0px) rotate(360deg); }
+    }
+
+    footer {
+      text-align: center;
+      padding: 1.2em;
+      background: #f0f0f0;
+      font-size: 0.9em;
+      color: #777;
+      position: relative;
+      z-index: 2;
     }
   </style>
 </head>
@@ -273,65 +248,57 @@ document.addEventListener('mousemove', e => {
     <a href="research.html">Research</a>
     <a href="projects.html">Games</a>
     <a href="achievements.html">Achievements</a>
-  
     <a href="gametheory.html">Game Theory</a>
-  
-    
-   
     <a href="skills.html">Qualifications</a>
   </nav>
 
   <main>
     <section id="home">
       <h2 class="section-title">Welcome</h2>
-      
       <div class="project-card">
         <p>Hi — I’m Malaika, and I notice patterns everywhere.</p>
-
         <p>Not in a poetic way, I mean literally. In how people walk across a room, how conversations loop, how random things rarely feel random. Studying Maths and Stats isn’t just about the numbers for me — it’s how I make sense of uncertainty, challenge assumptions, and find structure in what looks like chaos.</p>
-
         <p>I’ve explored probability by running games with hundreds of strangers. I’ve translated abstract theory into interactive 3D worlds. I’ve built models, analysed behaviour, and even used game development as a way to visualise decision-making under shifting probabilities. I find beauty in symmetry and meaning in noise. And when I’m not immersed in numbers, I’m teaching, volunteering, or advocating for mental health — because real impact lies in applying insight where it matters.</p>
-
         <p>This site is a collection of the things I’ve worked on — research, projects — and probably a few questions I haven’t figured out yet. Have a look around.</p>
-
         <p style="margin-top: 1.5em; font-weight: bold;">⬆ Use the buttons above to learn more ⬆</p>
       </div>
-      
-
-  </main>
-  </section>
-       
-    <section class="white-strip">
-      <div class="content">
-        <h2>More About Me</h2>
-        <p>woof</p>
-        <p>neigh</p>
-        <p>IN THE WORKS</p>
-      </div>
-
-      <div class="research-box">
-        <h3>Research Interests</h3>
-        <p> Meow meow fill this in  ✨</p>
-      </div>
     </section>
+  </main>
 
+  <!-- More About Me -->
+  <section class="white-strip">
+    <div class="content">
+      <h2>More About Me</h2>
+      <p>woof</p>
+      <p>neigh</p>
+      <p>IN THE WORKS</p>
+    </div>
+  </section>
+
+  <!-- Research Interests AFTER More About Me -->
+  <section>
+    <div class="research-box">
+      <h3>Research Interests</h3>
+      <p>Meow meow fill this in ✨</p>
+    </div>
+  </section>
 
   <!-- Floating shapes -->
-  <div class="floaty" style="--i:0; top:10%; left:5%;"></div>
-  <div class="floaty blue" style="--i:1; top:15%; left:80%;"></div>
-  <div class="floaty star" style="--i:2; top:30%; left:50%;"></div>
-  <div class="floaty moon" style="--i:3; top:40%; left:25%;"></div>
-  <div class="floaty" style="--i:4; top:60%; left:75%;"></div>
-  <div class="floaty blue" style="--i:5; top:70%; left:15%;"></div>
-  <div class="floaty moon" style="--i:6; top:80%; left:90%;"></div>
-  <div class="floaty star" style="--i:7; top:90%; left:30%;"></div>
-  <div class="floaty" style="--i:8; top:50%; left:60%;"></div>
-  <div class="floaty blue" style="--i:9; top:65%; left:40%;"></div>
-  <div class="floaty star" style="--i:10; top:20%; left:20%;"></div>
-  <div class="floaty moon" style="--i:11; top:75%; left:5%;"></div>
-  <div class="floaty" style="--i:12; top:10%; left:60%;"></div>
-  <div class="floaty blue" style="--i:13; top:35%; left:90%;"></div>
-  <div class="floaty star" style="--i:14; top:85%; left:45%;"></div>
+  <div class="floaty" style="top:10%; left:5%;"></div>
+  <div class="floaty blue" style="top:15%; left:80%;"></div>
+  <div class="floaty star" style="top:30%; left:50%;"></div>
+  <div class="floaty moon" style="top:40%; left:25%;"></div>
+  <div class="floaty" style="top:60%; left:75%;"></div>
+  <div class="floaty blue" style="top:70%; left:15%;"></div>
+  <div class="floaty moon" style="top:80%; left:90%;"></div>
+  <div class="floaty star" style="top:90%; left:30%;"></div>
+  <div class="floaty" style="top:50%; left:60%;"></div>
+  <div class="floaty blue" style="top:65%; left:40%;"></div>
+  <div class="floaty star" style="top:20%; left:20%;"></div>
+  <div class="floaty moon" style="top:75%; left:5%;"></div>
+  <div class="floaty" style="top:10%; left:60%;"></div>
+  <div class="floaty blue" style="top:35%; left:90%;"></div>
+  <div class="floaty star" style="top:85%; left:45%;"></div>
 
   <footer>
     &copy; 2025 Malaika Bahadar | Built with love and HTML 💖
