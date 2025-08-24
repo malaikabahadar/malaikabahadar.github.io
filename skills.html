@@ -161,6 +161,53 @@ document.addEventListener('mousemove', e => {
       color: #000;
       transform: scale(1.05);
     }
+    .timeline {
+      position: relative;
+      margin-left: 10px;
+      padding-left: 15px;
+      border-left: 4px solid #ffaec9;
+    }
+
+    .edu-card {
+      background: #fbfbfd;
+      border-left: 5px solid rgba(255,174,201,0.8);
+      border-radius: 10px;
+      padding: 1.5em 1.5em 1.5em 1.5em;
+      margin-bottom: 2em;
+      position: relative;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      overflow: hidden;
+    }
+
+    .edu-card:hover {
+      transform: translateY(-3px) scale(1.01);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+    }
+
+    .edu-dot {
+      position: absolute;
+      left: -14px;
+      top: 1.4em;
+      width: 12px;
+      height: 12px;
+      background-color: #ffaec9;
+      border-radius: 50%;
+      border: 3px solid #fff;
+      box-shadow: 0 0 8px rgba(255, 174, 201, 0.8);
+    }
+
+    .edu-entry-title {
+      margin: 0;
+      font-weight: 600;
+      color: #333;
+      font-size: 1.1rem;
+    }
+
+    .edu-entry-sub {
+      margin: 5px 0 0 0;
+      color: #555;
+    }
 
     footer {
       text-align: center;
@@ -271,6 +318,38 @@ document.addEventListener('mousemove', e => {
       </div>
     </section>
   </main>
+<main>
+    <section>
+      <h2>Certifications</h2>
+     
+    <p><strong>Microsoft EDI Challenge: </strong>Semi-finalist</p>
+    <p><strong>IEUK 2025: </strong>Finance, Professional Services and Consulting</p>
+    <p>Bentley Work Experience</p>
+  
+    </section>
+  </main>
+  <main>
+    <section>
+      <h2>Education</h2>
+      <div class="timeline">
+        <div class="edu-card">
+          <div class="edu-dot"></div>
+          <p class="edu-entry-title">University of West London</p>
+          <p class="edu-entry-sub">BSc Mathematics and Statistics (2023–2026) – Predicted First</p>
+        </div>
+        <div class="edu-card">
+          <div class="edu-dot"></div>
+          <p class="edu-entry-title">Dixons Sixth Form</p>
+          <p class="edu-entry-sub">A Levels – Grades: AABCC</p>
+        </div>
+        <div class="edu-card">
+          <div class="edu-dot"></div>
+          <p class="edu-entry-title">Belle Vue Academy</p>
+          <p class="edu-entry-sub">9 GCSEs at A*</p>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <!-- Floating shapes (circles, stars, moons) -->
   <div class="floaty" style="--i:0;"></div>
@@ -294,4 +373,3 @@ document.addEventListener('mousemove', e => {
   </footer>
 </body>
 </html>
-
