@@ -42,6 +42,36 @@ document.addEventListener('mousemove', e => {
 </script>
 
   <style>
+    header.header-container {
+  position: relative;         /* for absolute positioning of the image */
+  text-align: center;         /* keeps header text centered */
+  padding: 2.5em 1em;
+  background: linear-gradient(135deg, #ffaec9, #a6d5fa);
+  color: #1a1a1a;
+  font-family: 'Baloo 2', cursive;
+}
+
+.profile-pic {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  position: absolute;         /* removes image from normal flow */
+  top: 50%;                   /* vertically center relative to header */
+  right: 1em;                 /* distance from right edge */
+  transform: translateY(-50%);
+}
+
+/* Responsive: image moves below text on small screens */
+@media (max-width: 600px) {
+  .profile-pic {
+    position: static;         /* image returns to normal flow */
+    display: block;
+    margin: 1em auto 0 auto;  /* spacing below header text */
+    transform: none;
+  }
+}
+
     * { box-sizing: border-box; }
 
     body {
@@ -198,11 +228,15 @@ document.addEventListener('mousemove', e => {
   </style>
 </head>
 <body>
-  <header>
+  <header class="header-container">
+  <div class="header-text">
     <h1>Malaika Bahadar</h1>
     <p>Mathematics & Statistics Student | Tutor | Aspiring Mathematics Researcher</p>
     <p>Email: <a href="mailto:malaikabahadar@gmail.com">malaikabahadar@gmail.com</a> | London</p>
-  </header>
+  </div>
+  <img src="https://i.imgur.com/AeBq0f5.jpg" alt="Malaika Bahadar" class="profile-pic">
+</header>
+
 
   <nav>
     <a href="research.html">Research</a>
